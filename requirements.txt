@@ -1,0 +1,7 @@
+flask
+langchain-core
+langchain-openai
+langchain-anthropic
+langchain-voyageai
+langgraph
+chromadb>=0.3.21
