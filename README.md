@@ -102,7 +102,3 @@ python main.py --list
 ```bash
 python main.py --reset
 ```
-
-## License
-
-MIT
