@@ -1,0 +1,52 @@
+city,state,avg_price_usd,avg_sq_m,median_days_on_market,trend,updated_at
+New York,NY,890000,78,45,stable,2025-10-01
+Los Angeles,CA,810000,95,42,rising,2025-10-01
+Chicago,IL,460000,110,39,stable,2025-10-01
+Austin,TX,520000,115,33,rising,2025-10-01
+Boston,MA,760000,88,40,rising,2025-10-01
+San Francisco,CA,1240000,82,48,declining,2025-10-01
+San Diego,CA,740000,102,36,rising,2025-10-01
+Dallas,TX,480000,120,34,stable,2025-10-01
+Denver,CO,610000,105,38,rising,2025-10-01
+Portland,OR,590000,108,37,declining,2025-10-01
+Nashville,TN,510000,112,35,rising,2025-10-01
+Seattle,WA,870000,97,41,stable,2025-10-01
+Minneapolis,MN,440000,118,30,stable,2025-10-01
+Raleigh,NC,490000,113,32,rising,2025-10-01
+Salt Lake City,UT,540000,110,33,stable,2025-10-01
+Philadelphia,PA,410000,120,46,declining,2025-10-01
+Madison,WI,450000,115,29,rising,2025-10-01
+Detroit,MI,280000,125,52,stable,2025-10-01
+Charlotte,NC,500000,118,31,rising,2025-10-01
+Atlanta,GA,470000,117,35,stable,2025-10-01
+Phoenix,AZ,430000,120,38,rising,2025-10-01
+Tampa,FL,420000,110,36,rising,2025-10-01
+Miami,FL,650000,100,42,stable,2025-10-01
+Las Vegas,NV,450000,122,33,declining,2025-10-01
+Houston,TX,410000,130,37,stable,2025-10-01
+San Antonio,TX,370000,128,35,rising,2025-10-01
+Orlando,FL,400000,115,39,stable,2025-10-01
+Cincinnati,OH,320000,125,28,stable,2025-10-01
+Cleveland,OH,290000,130,34,declining,2025-10-01
+Pittsburgh,PA,310000,122,33,stable,2025-10-01
+Indianapolis,IN,340000,118,31,rising,2025-10-01
+Kansas City,MO,360000,119,30,stable,2025-10-01
+St. Louis,MO,310000,125,36,declining,2025-10-01
+New Orleans,LA,370000,120,42,declining,2025-10-01
+Boise,ID,430000,115,27,stable,2025-10-01
+Salt Lake City,UT,540000,110,33,stable,2025-10-01
+Columbus,OH,350000,121,29,rising,2025-10-01
+Baltimore,MD,380000,115,40,declining,2025-10-01
+Richmond,VA,420000,118,33,stable,2025-10-01
+Tucson,AZ,350000,120,35,stable,2025-10-01
+Sacramento,CA,630000,105,37,rising,2025-10-01
+Reno,NV,520000,112,31,stable,2025-10-01
+Omaha,NE,310000,127,28,rising,2025-10-01
+Des Moines,IA,300000,130,29,stable,2025-10-01
+Fargo,ND,280000,135,34,stable,2025-10-01
+Anchorage,AK,390000,110,43,declining,2025-10-01
+Honolulu,HI,890000,95,49,stable,2025-10-01
+Charleston,SC,480000,116,32,rising,2025-10-01
+Savannah,GA,430000,118,33,stable,2025-10-01
+Albuquerque,NM,350000,120,40,stable,2025-10-01
+Boulder,CO,790000,98,28,rising,2025-10-01

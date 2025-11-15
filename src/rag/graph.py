@@ -10,6 +10,8 @@ from ..config import Config
 
 
 class RAGGraph():
+    """Orchestrates RAG workflows: embedding, retrieval, and generation."""
+
     def __init__(
         self,
         llm_service: LLMService,
@@ -24,6 +26,7 @@ class RAGGraph():
         self.checkpointer = MemorySaver()
 
     def _build_rag_graph(self):
+        """Compile graph that returns a conversational response"""
         workflow = StateGraph(state_schema=RAGState)
         workflow.add_edge(START, "embed")
         workflow.add_node("embed", build_embed_query_func(self.embedding_service))
@@ -35,6 +38,8 @@ class RAGGraph():
         return workflow.compile(checkpointer=self.checkpointer)
     
     def _build_retriever_graph(self):
+        """Compile graph that returns retrieved documents."""
+
         workflow = StateGraph(state_schema=RAGState)
         workflow.add_edge(START, "embed")
         workflow.add_node("embed", build_embed_query_func(self.embedding_service))
@@ -44,6 +49,8 @@ class RAGGraph():
         return workflow.compile()
 
     def retrieve(self, query: str, top_k=None, category=None) -> str:
+        """Runs the retriever workflow."""
+
         retrieval_workflow = self._build_retriever_graph()
         query_as_msg = HumanMessage(query)
         if top_k is None:
@@ -54,6 +61,8 @@ class RAGGraph():
 
 
     def run(self, convo_id: str, query: str) -> str:
+        """Runs the conversational RAG workflow"""
+
         query_as_msg = HumanMessage(query)
         config = {"configurable": {"thread_id": convo_id}}
         rag_workflow = self._build_rag_graph()

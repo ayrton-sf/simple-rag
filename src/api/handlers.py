@@ -4,9 +4,13 @@ from typing import Tuple, Dict, Any
 from .session import SessionManager
 from ..rag.graph import RAGGraph
 
+"""HTTP handlers for the RAG API endpoints."""
+
 JsonResponse = Tuple[Dict[str, Any], int]
 
+
 def handle_query() -> JsonResponse:
+    """Handle a user query: run RAG, manage session cookies, and return the reply."""
     rag_graph: RAGGraph = current_app.config["rag_graph"]
     session_manager: SessionManager = current_app.config["session_manager"]
     
@@ -33,6 +37,7 @@ def handle_query() -> JsonResponse:
         
 
 def handle_search() -> JsonResponse:
+    """Search documents using the RAG retriever and return found results."""
     rag_graph: RAGGraph = current_app.config["rag_graph"]
 
     query = request.args.get("q")

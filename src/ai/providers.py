@@ -1,11 +1,16 @@
 from enum import Enum
 
+
 class ModelProvider(Enum):
+    """Provider to API Key mapping"""
+
     OPEN_AI = "OPENAI_API_KEY"
     ANTHROPIC = "ANTHROPIC_API_KEY"
     VOYAGE_AI = "VOYAGE_AI_API_KEY"
 
 class BaseModelEnum(Enum):
+    """Base enum for model names that associates a provider with each member."""
+
     def __new__(cls, value, provider: ModelProvider):
         obj = object.__new__(cls)
         obj._value_ = value
@@ -14,6 +19,8 @@ class BaseModelEnum(Enum):
     
     @classmethod
     def provider_from_str(cls, model_name: str) -> ModelProvider:
+        """Returns the provider associated with a model name."""
+
         for m in cls:
             if m.value == model_name:
                 return m.provider

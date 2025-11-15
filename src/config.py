@@ -12,9 +12,10 @@ class Config:
         self.llm_model = self._determine_env_var("LLM_MODEL")
         self.embeddings_model = self._determine_env_var("EMBEDDINGS_MODEL")
         self.chroma_db_dir = self._determine_env_var("CHROMA_DB_DIR")
+        self.system_prompt = os.getenv("SYSTEM_PROMPT", None)
         self._set_llm_provider()
         self._set_embeddings_provider()
-        self.top_k = 5
+        self.top_k = 3
 
     def _set_llm_provider(self):
         llm_model = self.llm_model
