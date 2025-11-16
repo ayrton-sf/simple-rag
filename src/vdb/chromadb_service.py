@@ -57,7 +57,7 @@ class ChromaDBService:
             parsed_result = {
                 "id": results["ids"][0][i],
                 "document": results["documents"][0][i],
-                "category": results["metadatas"][0][i]
+                "category": results["metadatas"][0][i]["category"]
             }
             parsed_results.append(parsed_result)
         
