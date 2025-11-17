@@ -1,0 +1,127 @@
+name: RAG Chatbot Integration Tests
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    env:
+      LLM_MODEL: ${{ secrets.LLM_MODEL }}
+      EMBEDDINGS_MODEL: ${{ secrets.EMBEDDINGS_MODEL }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      VOYAGE_AI_API_KEY: ${{ secrets.VOYAGE_AI_API_KEY }}
+      CHROMA_DB_DIR: ./data/chromadb
+      BASE_URL: http://localhost:8000
+    
+    steps:
+    - name: Checkout RAG Chatbot Repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+        
+    - name: Install RAG Chatbot Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+    - name: Initialize ChromaDB Directory
+      run: |
+        mkdir -p data/chromadb
+        
+    - name: Load Real Estate Listings Data
+      run: |
+        python main.py --load example/real_estate_listings.csv property
+        
+    - name: Load FAQ Data
+      run: |
+        python main.py --load example/faq.csv faq
+        
+    - name: Load Market Data
+      run: |
+        python main.py --load example/market_data.csv market
+        
+    - name: Load Agencies Data
+      run: |
+        python main.py --load example/agencies.jsonl agency
+        
+    - name: List Loaded Categories
+      run: |
+        python main.py --list
+        
+    - name: Start RAG API Server
+      run: |
+        python main.py --host 0.0.0.0 --port 8000 &
+        echo $! > api_server.pid
+        
+    - name: Verify API is Running
+      run: |
+        echo "Waiting for API to start..."
+        for i in {1..30}; do
+          if curl -s http://localhost:8000/health >/dev/null 2>&1 || curl -s http://localhost:8000/ >/dev/null 2>&1; then
+            echo "API is ready!"
+            exit 0
+          fi
+          echo "Attempt $i/30: API not ready yet, waiting..."
+          sleep 2
+        done
+        echo "API failed to start within 60 seconds"
+        exit 1
+        
+    - name: Checkout Test Repository
+      uses: actions/checkout@v4
+      with:
+        repository: ayrton-sf/rag-chatbot-tests
+        path: rag-chatbot-tests
+        
+    - name: Checkout AI Metrics Package
+      uses: actions/checkout@v4
+      with:
+        repository: ayrton-sf/ai-metrics
+        path: ai-metrics
+        
+    - name: Install AI Metrics Package
+      run: |
+        pip install -e ai-metrics
+        
+    - name: Install Test Dependencies
+      working-directory: rag-chatbot-tests
+      run: |
+        pip install -r requirements.txt
+        
+    - name: Run Integration Tests
+      working-directory: rag-chatbot-tests
+      run: |
+        aim test -c aim.config.json
+        
+    - name: Display Test Results
+      if: always()
+      working-directory: rag-chatbot-tests
+      run: |
+        if [ -d "aim_data/failures" ]; then
+          LATEST_FAILURE=$(ls -t aim_data/failures/failures_*.json 2>/dev/null | head -1)
+          if [ -n "$LATEST_FAILURE" ]; then
+            echo "=== Test Failures ==="
+            cat "$LATEST_FAILURE"
+          else
+            echo "No failure file found - all tests passed!"
+          fi
+        else
+          echo "No failures directory found"
+        fi
+        
+    - name: Stop API Server
+      if: always()
+      run: |
+        if [ -f api_server.pid ]; then
+          kill $(cat api_server.pid) || true
+        fi
