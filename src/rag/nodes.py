@@ -28,7 +28,7 @@ def build_generate_res_func(llm_service: LLMService) -> dict[str, Any]:
     def generate_response(state: RAGState):
         response = llm_service.rag_response(
             messages=state["messages"],
-            retrieved=state["retrieved"],    
+            retrieved=[],    
         )
         return {"messages": [response]}
 
