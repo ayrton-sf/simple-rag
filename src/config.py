@@ -15,7 +15,7 @@ class Config:
         self.system_prompt = os.getenv("SYSTEM_PROMPT", None)
         self._set_llm_provider()
         self._set_embeddings_provider()
-        self.top_k = 3
+        self.top_k = 5
 
     def _set_llm_provider(self):
         llm_model = self.llm_model

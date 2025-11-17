@@ -44,7 +44,7 @@ def handle_search() -> JsonResponse:
     if not query:
         return jsonify({"error": "Missing required parameter 'q'"}), 400
         
-    top_k = request.args.get("n_results")
+    top_k = request.args.get("n_results", type=int)
     category = request.args.get("category")
     
     try:

@@ -10,3 +10,6 @@ class LLModel(BaseModelEnum):
     CLAUDE_SONNET_3_5 = ("claude-3-5-sonnet-latest", ModelProvider.ANTHROPIC)
     CLAUDE_SONNET_3_7 = ("claude-3-7-sonnet-latest", ModelProvider.ANTHROPIC)
     CLAUDE_SONNET_4 = ("claude-sonnet-4-20250514", ModelProvider.ANTHROPIC)
+    CLAUDE_SONNET_4_5 = ("claude-sonnet-4-5-20250929", ModelProvider.ANTHROPIC)
+    #Older model for testing purposes
+    CLAUDE_HAIKU_3 = ("claude-3-haiku-20240307", ModelProvider.ANTHROPIC)

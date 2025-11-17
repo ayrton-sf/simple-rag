@@ -1,20 +1,20 @@
-{"id":"AG001","address":"123 Main St, New York, NY","name":"Prime Realty","state":"NY","open_hours":"09:00","close_hours":"18:00","phone":"+1-212-555-1832"}
-{"id":"AG002","address":"782 Sunset Blvd, Los Angeles, CA","name":"Sunset Properties","state":"CA","open_hours":"09:00","close_hours":"17:30","phone":"+1-310-555-9476"}
-{"id":"AG003","address":"45 Lakeview Dr, Chicago, IL","name":"UrbanNest Realty","state":"IL","open_hours":"08:30","close_hours":"17:00","phone":"+1-773-555-6021"}
-{"id":"AG004","address":"2200 Barton Springs Rd, Austin, TX","name":"Haven Estates","state":"TX","open_hours":"09:00","close_hours":"18:00","phone":"+1-512-555-4410"}
-{"id":"AG005","address":"16 Beacon St, Boston, MA","name":"BlueSky Homes","state":"MA","open_hours":"09:00","close_hours":"17:30","phone":"+1-617-555-2387"}
-{"id":"AG006","address":"500 Ocean Ave, San Diego, CA","name":"Golden Key Realty","state":"CA","open_hours":"08:30","close_hours":"18:00","phone":"+1-619-555-7342"}
-{"id":"AG007","address":"4100 Elm Dr, Dallas, TX","name":"Summit Homes","state":"TX","open_hours":"09:00","close_hours":"18:00","phone":"+1-214-555-9924"}
-{"id":"AG008","address":"981 Pine St, Seattle, WA","name":"Skyline Estates","state":"WA","open_hours":"09:00","close_hours":"17:00","phone":"+1-206-555-3678"}
-{"id":"AG009","address":"330 Market St, Philadelphia, PA","name":"HomeLine Realty","state":"PA","open_hours":"08:30","close_hours":"17:30","phone":"+1-215-555-1489"}
-{"id":"AG010","address":"150 Peachtree Rd, Atlanta, GA","name":"TrueNorth Realty","state":"GA","open_hours":"09:00","close_hours":"18:00","phone":"+1-404-555-5730"}
-{"id":"AG011","address":"88 Grand Ave, Denver, CO","name":"AnchorPoint Properties","state":"CO","open_hours":"09:00","close_hours":"17:30","phone":"+1-303-555-9204"}
-{"id":"AG012","address":"670 Market St, San Francisco, CA","name":"NextStep Realty","state":"CA","open_hours":"09:00","close_hours":"18:00","phone":"+1-415-555-1876"}
-{"id":"AG013","address":"1420 Music Row, Nashville, TN","name":"LuxeHome Group","state":"TN","open_hours":"08:30","close_hours":"17:30","phone":"+1-615-555-4458"}
-{"id":"AG014","address":"950 Park Ave, Minneapolis, MN","name":"BrightStone Properties","state":"MN","open_hours":"09:00","close_hours":"17:00","phone":"+1-612-555-3198"}
-{"id":"AG015","address":"233 Willow Ln, Raleigh, NC","name":"ParkView Realty","state":"NC","open_hours":"09:00","close_hours":"18:00","phone":"+1-919-555-6721"}
-{"id":"AG016","address":"310 Liberty St, Salt Lake City, UT","name":"EdgeCity Realty","state":"UT","open_hours":"08:30","close_hours":"17:30","phone":"+1-385-555-1143"}
-{"id":"AG017","address":"712 Broad St, Madison, WI","name":"Hearthstone Homes","state":"WI","open_hours":"09:00","close_hours":"17:30","phone":"+1-608-555-9332"}
-{"id":"AG018","address":"220 Jefferson Ave, Detroit, MI","name":"MetroLiving Realty","state":"MI","open_hours":"09:00","close_hours":"18:00","phone":"+1-313-555-8249"}
-{"id":"AG019","address":"480 Queen St, Charlotte, NC","name":"DreamSpace Realty","state":"NC","open_hours":"09:00","close_hours":"17:30","phone":"+1-704-555-4760"}
-{"id":"AG020","address":"560 Division St, Portland, OR","name":"OpenDoor Group","state":"OR","open_hours":"09:00","close_hours":"18:00","phone":"+1-503-555-2583"}
+{"id":"AG001","address":"123 Main St, New York, NY","state":"NY","open_hours":"09:00","close_hours":"18:00","phone":"+1-212-555-1832"}
+{"id":"AG002","address":"782 Sunset Blvd, Los Angeles, CA","state":"CA","open_hours":"09:00","close_hours":"17:30","phone":"+1-310-555-9476"}
+{"id":"AG003","address":"45 Lakeview Dr, Chicago, IL","state":"IL","open_hours":"08:30","close_hours":"17:00","phone":"+1-773-555-6021"}
+{"id":"AG004","address":"2200 Barton Springs Rd, Austin, TX","state":"TX","open_hours":"09:00","close_hours":"18:00","phone":"+1-512-555-4410"}
+{"id":"AG005","address":"16 Beacon St, Boston, MA","state":"MA","open_hours":"09:00","close_hours":"17:30","phone":"+1-617-555-2387"}
+{"id":"AG006","address":"500 Ocean Ave, San Diego, CA","state":"CA","open_hours":"08:30","close_hours":"18:00","phone":"+1-619-555-7342"}
+{"id":"AG007","address":"4100 Elm Dr, Dallas, TX","state":"TX","open_hours":"09:00","close_hours":"18:00","phone":"+1-214-555-9924"}
+{"id":"AG008","address":"981 Pine St, Seattle, WA","state":"WA","open_hours":"09:00","close_hours":"17:00","phone":"+1-206-555-3678"}
+{"id":"AG009","address":"330 Market St, Philadelphia, PA","state":"PA","open_hours":"08:30","close_hours":"17:30","phone":"+1-215-555-1489"}
+{"id":"AG010","address":"150 Peachtree Rd, Atlanta, GA","state":"GA","open_hours":"09:00","close_hours":"18:00","phone":"+1-404-555-5730"}
+{"id":"AG011","address":"88 Grand Ave, Denver, CO","state":"CO","open_hours":"09:00","close_hours":"17:30","phone":"+1-303-555-9204"}
+{"id":"AG012","address":"670 Market St, San Francisco, CA","state":"CA","open_hours":"09:00","close_hours":"18:00","phone":"+1-415-555-1876"}
+{"id":"AG013","address":"1420 Music Row, Nashville, TN","state":"TN","open_hours":"08:30","close_hours":"17:30","phone":"+1-615-555-4458"}
+{"id":"AG014","address":"950 Park Ave, Minneapolis, MN","state":"MN","open_hours":"09:00","close_hours":"17:00","phone":"+1-612-555-3198"}
+{"id":"AG015","address":"233 Willow Ln, Raleigh, NC","state":"NC","open_hours":"09:00","close_hours":"18:00","phone":"+1-919-555-6721"}
+{"id":"AG016","address":"310 Liberty St, Salt Lake City, UT","state":"UT","open_hours":"08:30","close_hours":"17:30","phone":"+1-385-555-1143"}
+{"id":"AG017","address":"712 Broad St, Madison, WI","state":"WI","open_hours":"09:00","close_hours":"17:30","phone":"+1-608-555-9332"}
+{"id":"AG018","address":"220 Jefferson Ave, Detroit, MI","state":"MI","open_hours":"09:00","close_hours":"18:00","phone":"+1-313-555-8249"}
+{"id":"AG019","address":"480 Queen St, Charlotte, NC","state":"NC","open_hours":"09:00","close_hours":"17:30","phone":"+1-704-555-4760"}
+{"id":"AG020","address":"560 Division St, Portland, OR","state":"OR","open_hours":"09:00","close_hours":"18:00","phone":"+1-503-555-2583"}

@@ -32,7 +32,7 @@ class LLMService:
             ModelProvider.ANTHROPIC: lambda: ChatAnthropic(
                 model=self.config.llm_model,
                 api_key=self.config.llm_api_key,
-                max_tokens=32000,
+                max_tokens=4096,
                 max_retries=3
             ),
             ModelProvider.OPEN_AI: lambda: ChatOpenAI(
