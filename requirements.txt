@@ -1,4 +1,5 @@
 flask
+pandas
 langchain-core
 langchain-openai
 langchain-anthropic
