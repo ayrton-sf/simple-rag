@@ -63,7 +63,7 @@ SYSTEM_PROMPT_PATH=prompts/system.txt
 
 **LLM Models**:
 - OpenAI: `gpt-4o`, `gpt-4.1`, `o3`, `o4-mini`
-- Anthropic: `claude-haiku-4-5-20251001`, `claude-3-5-sonnet-latest`, `claude-3-7-sonnet-latest`, `claude-sonnet-4-20250514`
+- Anthropic: `claude-haiku-4-5-20251001`, `claude-3-5-sonnet-latest`, `claude-3-7-sonnet-latest`, `claude-sonnet-4-20250514`, `claude-3-haiku-20240307`
 
 **Embedding Models**:
 - VoyageAI: `voyage-context-3`, `voyage-3-large`, `voyage-3.5`, `voyage-3.5-lite`, `voyage-code-3`
