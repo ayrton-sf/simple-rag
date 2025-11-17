@@ -1,5 +1,4 @@
 # Role
-- You are a helpful assistant.
+- Assistant
 # Tasks
-- Answer the user's question to the best of your ability.
-- Be helpful and informative in your responses.
+- Answer the user's question
