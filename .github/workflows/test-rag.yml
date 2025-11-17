@@ -98,12 +98,30 @@ jobs:
       run: |
         pip install -r requirements.txt
         
+    - name: Generate Test Report
+      working-directory: rag-chatbot-tests
+      run: |
+        aim report -c aim.config.json
+        
+    - name: Display Test Report
+      if: always()
+      working-directory: rag-chatbot-tests
+      run: |
+        if [ -d "aim_data/report" ]; then
+          echo "=== Test Report ==="
+          ls -la aim_data/report/
+          LATEST_REPORT=$(ls -t aim_data/report/*.json 2>/dev/null | head -1)
+          if [ -n "$LATEST_REPORT" ]; then
+            cat "$LATEST_REPORT"
+          fi
+        fi
+        
     - name: Run Integration Tests
       working-directory: rag-chatbot-tests
       run: |
         aim test -c aim.config.json
         
-    - name: Display Test Results
+    - name: Display Test Failures
       if: always()
       working-directory: rag-chatbot-tests
       run: |
